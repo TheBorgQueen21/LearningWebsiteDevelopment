@@ -1,1 +1,20 @@
+<head>
+</head>
 
+<body>
+  <h1 id= "music">musical</h1>
+  
+  <script>
+  string = "Hamilton is best"
+  number = 16
+
+  musical = string + ", I watched it when I was " + number;
+
+  newvar = document.getElementById("music")
+  newvar.innerHTML = musical
+  </script>
+  
+</body>
+
+
+//This code changes music HTML tag to new varible
