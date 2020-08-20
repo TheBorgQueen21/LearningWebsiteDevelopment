@@ -1,0 +1,19 @@
+<head>
+</head>
+
+<body>
+  <h1 id= "link"></h1>
+  <h2 id="test"></h2>
+  <script>
+    var userlink = prompt("Please Enter the Link")
+
+    var firstfourchars = userlink.substr(0, 4)
+
+    if (firstfourchars == "http"){
+      link.innerHTML = userlink
+    } else{
+      link.innerHTML = ""+ "https://" + userlink
+    }
+  </script>
+
+</body>
