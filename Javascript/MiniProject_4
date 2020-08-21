@@ -1,0 +1,8 @@
+
+function tipcalc (bill, tip = 15){
+  newtip = tip/100
+  return bill * newtip
+}
+
+var endtip = tipcalc (20)
+console.log(endtip)
