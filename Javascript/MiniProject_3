@@ -1,0 +1,8 @@
+number = prompt("Please enter a number", 18)
+newnumber = Number(number)
+
+if (typeof(newnumber) != Number){
+  console.log("Please enter a valid number")
+} else if(newnumber >= 18){
+    console.log("You can vote!")
+}
