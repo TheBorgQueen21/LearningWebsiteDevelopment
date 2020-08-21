@@ -1,0 +1,31 @@
+HTML:
+<h1>Anika's Tip Calculator</h1>
+<label for="bill_amount"> Bill Amount: </label>
+<input type="number" id="bill_amount">
+<br>
+<br>
+<label for="tip_amount"> Tip Percentage: </label>
+<input type="number" id="tip_amount">
+<br>
+<br>
+<button id="submit" type="submit" onClick="calc()"> Calculate the Tip and the Total Bill </button>
+<br>
+<br>
+<h3>Your Tip Cost is: <span id = "finaltip">____</span> </h3>
+<h3>Your Total Bill is: <span id = "finalbill">____</span> </h3>
+
+JAVASCRIPT:
+function calc(){
+  var bill = Number(document.getElementById("bill_amount").value)
+  var tip = document.getElementById("tip_amount")
+  tip = Number(tip.value)
+  var tipper = tip/100;
+  
+  var TotalTip = bill * tipper;
+  var finaltip = document.getElementById("finaltip");
+  finaltip.innerText = TotalTip
+  
+  var finalbill = document.getElementById("finalbill");
+  finalbill.innerText = bill + TotalTip;
+}
+
