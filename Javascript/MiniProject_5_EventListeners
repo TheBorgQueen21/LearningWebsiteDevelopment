@@ -1,0 +1,47 @@
+<body>
+  <h1>Choose Your Own Webpage</h1>
+
+  <div>
+    <label>Background Color</label>
+    <input type="text" class="bg-color">
+  </div>
+  <br>
+
+  <div>
+    <label>Text Color</label>
+    <input type="text" class="text-color">
+  </div>
+  <br>
+
+  <div>
+    <label>Font Size</label>
+    <input type="number" class="number">
+  </div>
+  <br>
+
+<script>
+  var bgColor = document.querySelector(".bg-color")
+  var textColor = document.querySelector(".text-color")
+  var fontSize = document.querySelector(".number")
+
+  var body = document.querySelector("body")
+
+  bgColor.addEventListener('keydown', function(event){
+    var color = event.target.value
+    body.style.backgroundColor = color
+  });
+
+  textColor.addEventListener('keyup', function(event){
+    var color = event.target.value
+    body.style.color = color
+  });
+
+  fontSize.addEventListener('keyup', function(event){
+    var text = event.target.value
+    body.style.fontSize = text + 'px'
+  });
+
+
+</script>
+
+</body>
