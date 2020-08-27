@@ -1,1 +1,8 @@
+<script>
+  var mynum = 21
+  var inputnum = prompt("Please enter a number:")
 
+  while(inputnum != mynum){
+   inputnum = prompt("Try Again! Pick another Number")
+  }
+</script>
