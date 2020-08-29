@@ -1,1 +1,67 @@
+HTML
+<body>
+  <button class="open">Open a Modal</button>
+  <h1>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</h1>
+  
+  <div class = " modal" style='display= none'>
+    <h3 class="Hi ">Hi I'm a Modal!</h3>
+    <button class="" id="close"> Close the Modal</button>
+    <h1>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</h1>
+  </div>
+  
+</body>
+
+
+CSS
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 5px 5px #000;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    display:none;
+    }
+    
+    
+    
+JAVASCRIPT
+var openbtn = document.querySelector(".open")
+var body = document.querySelector("body")
+var closebtn = document.getElementById("close")
+
+class Modal {
+  constructor(){
+    this.modal = document.querySelector(".modal")
+  }
+  open() {
+    this.modal.style.display = 'initial'
+    body.style.background = "gray"
+  }
+  close(){
+    this.modal.style.display = 'none'
+    body.style.background = "white"
+  }
+  changeContent(title, text) {
+    if(title !== undefined) {
+      this.modal.querySelector(".js-modal-title").innerText = title
+    }
+    if(text !== undefined) {
+      this.modal.querySelector(".js-modal-text").innerText = text
+    }
+  }
+}
+
+const modal = new Modal("Title Here", "Text here")
+
+openbtn.addEventListener('click', function(event) {
+  modal.open()
+})
+closebtn.addEventListener('click', function(event){
+  modal.close()
+})
 
