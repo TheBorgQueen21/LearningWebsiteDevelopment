@@ -1,0 +1,37 @@
+HTML
+<h1 class = "black" id="Anika Mathur" style='font-size:60px'>Anika Mathur</h1>
+
+CSS
+.red {
+   color: red;
+}
+.black {
+  color: black;
+}
+
+JS
+var title= document.getElementById("Anika Mathur")
+var titletwo = title.innerText
+var chars = titletwo.split("");
+
+let html = ""
+
+chars.forEach(letter => {
+  if(letter !== ' '){
+    classes = 'letter js-letter'
+  }
+  html = html + `<span class = "${classes}">${letter}</span>`
+})
+
+title.innerHTML = html
+const jsletter = document.querySelectorAll(".js-letter")
+jsletter.forEach(node => {
+  node.addEventListener('mouseover', function(event){
+    this.classList.remove("black")
+    this.classList.add("red")
+  })
+  node.addEventListener("mouseout", function(event){
+    this.classList.remove("red")
+    this.classList.add("black")
+  })
+})
